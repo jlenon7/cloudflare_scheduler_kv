@@ -3,6 +3,10 @@ name = "cloudflare-worker-kv"
 main = "src/index.ts"
 compatibility_date = "2024-04-05"
 
+kv_namespaces = [
+	{ binding = "KV", preview_id = "2ef0965a65fe411fb3abc0432dd849fd", id = "aa5edaf1761e4129b1b985f3ebd154f0" },
+]
+
 # Cron Triggers
 # Docs: https://developers.cloudflare.com/workers/platform/triggers/cron-triggers/
 # Configuration: https://developers.cloudflare.com/workers/wrangler/configuration/#triggers
