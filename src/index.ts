@@ -36,10 +36,12 @@ export default {
 		const endpoint = 'https://api.cloudflare.com/client/v4/ips';
 		const resp = await fetch(endpoint);
 
-		await env.KV.put('ENDPOINT', endpoint);
-		await env.KV.put('STATUS', resp.ok ? 'success' : 'fail');
-		await env.KV.put('CRON', event.cron);
+		console.log('endpoint result:', resp);
 
-		console.log('event saved:', await env.KV.list());
+		// await env.KV.put('ENDPOINT', endpoint);
+		// await env.KV.put('STATUS', resp.ok ? 'success' : 'fail');
+		// await env.KV.put('CRON', event.cron);
+		//
+		// console.log('event saved:', await env.KV.list());
 	},
 };
